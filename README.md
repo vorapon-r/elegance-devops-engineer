@@ -7,11 +7,11 @@
 
 ## **ส่วนที่ 1: การเขียน Script**  
 ### ภารกิจ  
-เขียน Script โดยใช้ **Python** หรือ **Bash** ที่สามารถทำสิ่งต่อไปนี้:  
-1. สร้าง Docker Image สำหรับแอปพลิเคชัน **Python Flask** แบบง่าย  
-2. ตั้ง Tag ให้กับ Image โดยใช้หมายเลขเวอร์ชันที่ส่งมาเป็น Argument  
-3. Push Docker Image ไปยัง Docker Registry  
-4. Deploy Image ไปยัง Kubernetes Cluster โดยใช้คำสั่ง `kubectl`  
+สร้าง **Application** และ **Deploy** บน Cloud:
+1. สร้างเวปแอปพลิเคชัน แบบง่าย ๆ ด้วยเครื่องมือพัฒนาเช่น **Pythoin, Node.js** หรือ **Go**
+2. เวปแอปพลิเคชันต้องรองรับ **GET request** ด้วยข้อความเช่น "Hello World" ได้
+3. สร้่างสคริป YAML และ deploy แอปพลิเคชัน ไปยัง Kubernetes Cluster 
+4. โดยแอปพลิเคชันที่ deploy ต้องอยู่ในรูปแบบ Docker Image   
 
 ### เพิ่มคะแนน (Bonus)  
 - เพิ่ม Readiness และ Liveness Probe ใน Kubernetes Deployment  
@@ -20,13 +20,13 @@
 
 ## **ส่วนที่ 2: การตั้งค่า CI/CD Pipeline**  
 ### ภารกิจ  
-สร้างไฟล์การตั้งค่า **YAML** สำหรับเครื่องมือ CI/CD เช่น **GitLab CI/CD** หรือ **Github Action** โดยต้องทำสิ่งต่อไปนี้:  
-1. รัน Automated Tests  
+สร้าง Pipeline สำหรับเครื่องมือ CI/CD เช่น **GitLab CI/CD** หรือ **GitHub Actions** โดยต้องทำสิ่งต่อไปนี้:  
+1. สร้าง Docker image จาก เวปแอปพลิเคชันข้างต้น
 2. Build และ Push Docker Image ไปยัง Container Registry  
-3. Deploy แอปพลิเคชันไปยัง Kubernetes Cluster  
+3. ตั้งค่าให้การทำงาน automate tests (เช่น unit tests, integration tests)
 
 ### เพิ่มคะแนน (Bonus)  
-- เพิ่มขั้นตอนการแจ้งเตือนใน **Slack Channel** เมื่อการ Deploy สำเร็จ  
+- เพิ่มขั้นตอนการแจ้งเตือนใน **Slack Channel** หรือ notification service อื่นๆ เมื่อการ Deploy สำเร็จ  
 
 ---
 
@@ -62,7 +62,7 @@
 
 ## **ส่วนที่ 5: ภารกิจ Hands-on (ตัวเลือกเสริม)**  
 ### ภารกิจ  
-1. ตั้งค่า CI/CD Pipeline แบบสมบูรณ์ โดยใช้ **GitLab**, **Github** เพื่อ:  
+1. ตั้งค่า CI/CD Pipeline แบบสมบูรณ์ โดยใช้ **GitLab**, **GitHub** เพื่อ:  
    - รัน Test อย่างง่าย  
    - Build Docker Image  
    - Deploy ไปยัง Kubernetes Cluster  

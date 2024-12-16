@@ -20,7 +20,7 @@
 
 ## **ส่วนที่ 2: การตั้งค่า CI/CD Pipeline**  
 ### ภารกิจ  
-สร้างไฟล์การตั้งค่า **YAML** สำหรับเครื่องมือ CI/CD เช่น **GitLab CI/CD** หรือ **Jenkins** โดยต้องทำสิ่งต่อไปนี้:  
+สร้างไฟล์การตั้งค่า **YAML** สำหรับเครื่องมือ CI/CD เช่น **GitLab CI/CD** โดยต้องทำสิ่งต่อไปนี้:  
 1. รัน Automated Tests  
 2. Build และ Push Docker Image ไปยัง Container Registry  
 3. Deploy แอปพลิเคชันไปยัง Kubernetes Cluster  
@@ -62,7 +62,7 @@
 
 ## **ส่วนที่ 5: ภารกิจ Hands-on (ตัวเลือกเสริม)**  
 ### ภารกิจ  
-1. ตั้งค่า CI/CD Pipeline แบบสมบูรณ์ โดยใช้ **GitLab**, **CircleCI** หรือ **Jenkins** เพื่อ:  
+1. ตั้งค่า CI/CD Pipeline แบบสมบูรณ์ โดยใช้ **GitLab**, **CircleCI** เพื่อ:  
    - รัน Test อย่างง่าย  
    - Build Docker Image  
    - Deploy ไปยัง Kubernetes Cluster  
